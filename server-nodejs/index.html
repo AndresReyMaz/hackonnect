@@ -1,0 +1,26 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  async function demo() {
+    var mivariable = 'data';
+    var socket = io('http://localhost:8080');
+    socket.on('news', async function (data) {
+      while (true) {
+        await sleep(2000);
+        console.log(data);
+        socket.emit('my other event', { my: mivariable });
+        var elem = document.getElementById("title");
+        elem.innerHTML = "YA RECIBI EL MENSAJE Y ES: " + data.hello;
+      }
+    });
+  }
+  demo();
+</script>
+
+<html>
+  <body>
+    <h1 id="title"></h1>
+  </body>
+</html>

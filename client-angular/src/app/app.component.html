@@ -1,0 +1,22 @@
+<div class="container">
+
+</div>
+
+<video autoplay muted loop id="myVideo">
+  <source src="assets/vid.mp4" type="video/mp4">
+</video>
+
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+      <h2 class="white timer font center mb-5 animated bounceIn infinite" id="yourElement">{{countDown | async}}</h2>
+      <h1 class="center white title font mb-5">{{instrucciones[instruccion]}}</h1>
+      <h3 class="center white font">Progreso</h3>
+      <div class="col-12">
+        <div class="progress ml-5 mr-5">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" [ngClass]="{'bg-success': progress >= 65}" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width':getProgress()}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
