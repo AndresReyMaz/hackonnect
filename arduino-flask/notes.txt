@@ -1,0 +1,48 @@
+press red led                   #define RED_LED     0
+press green led                 #define GREEN_LED   1
+press blue led                  #define BLUE_LED    2
+press yellow led                #define YELLOW_LED  3
+press white led                 #define WHITE_LED   4
+press purple led                #define PURPLE_LED  5
+elevate temperature of sensor   #define RAISE_TEMP  6
+cover ldr                       #define COVER_LDR   7
+move servo 0 degrees            #define SERVO_0     8
+move servo 90 degrees           #define SERVO_90    9
+move servo 180 degrees          #define SERVO_180   10
+write R to main rgb led         #define MAIN_R      11
+write G to main rgb led         #define MAIN_G      12
+write B to main rgb led         #define MAIN_B      13
+write R_G to main rgb led       #define MAIN_RG     14
+write R_B to main rgb led       #define MAIN_RB     15
+write G_B to main rgb led       #define MAIN_GB     16
+
+
+	press buttons based on led label
+	elevate temperature sensor to a value 
+	cover light based on values
+	use potentiometer to move servo
+	use potentiometer to set colors to rgb 	
+
+
+
+Proto1:
+	Red_Potentiometer
+	temperature sensor
+	red button
+	green button
+
+Proto2:
+	Green_Potentiometer
+	Servo_Potentiometer
+	purple button
+	yellow button
+
+
+Proto3:
+	Blue_Potentiometer
+	ldr 
+	blue button	
+	white button 
+
+
+
